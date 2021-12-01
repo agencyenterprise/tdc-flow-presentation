@@ -42,7 +42,8 @@ pub contract DogsContract {
         }
 
         pub fun deposit(token: @Dog) {
-            self.ownedDogs[token.id] <-! token
+            let oldContract <- self.ownedDogs[token.id] <-! token
+            destroy oldContract
         }
 
         pub fun withdraw(withdrawID: UInt64): @Dog {
