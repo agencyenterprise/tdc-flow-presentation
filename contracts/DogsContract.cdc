@@ -1,5 +1,4 @@
 pub contract DogsContract {
-
     pub var totalNFTs: UInt64
 
     pub struct DogInfo {
@@ -16,7 +15,6 @@ pub contract DogsContract {
         }
     }
 
-
     pub resource Dog {
         pub let id: UInt64
         pub let dogInfo: DogInfo
@@ -28,12 +26,12 @@ pub contract DogsContract {
         }
     }
 
-    pub fun createDog(_ dogInfo: DogInfo): @Dog {
+    pub fun mintDog(_ dogInfo: DogInfo): @Dog {
         return <- create Dog(dogInfo)
     }
-
     pub resource interface CollectionPublic {
         pub fun listDogs(): {UInt64: DogInfo}
+        pub fun deposit(token: @Dog) 
     }
 
     pub resource Collection: CollectionPublic {

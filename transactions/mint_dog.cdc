@@ -14,7 +14,7 @@ transaction {
         //let dogInfo = DogsContract.DogInfo(name: "Rock", age: 1, breed: "Yorkshire", weight: 2.0)
         let dogInfo = DogsContract.DogInfo(name: "Dexter", age: 4, breed: "German Shepherd", weight: 6.0)
 
-        let dog <- DogsContract.createDog(dogInfo)
+        let dog <- DogsContract.mintDog(dogInfo)
 
         // where do we put Bilu?
 

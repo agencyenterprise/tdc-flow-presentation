@@ -23,6 +23,10 @@
       "address": "0xf8d6e0586b0a20c7",
       "key": "84f82df6790f07b281adb5bbc848bd6298a2de67f94bdfac7a400d5a1b893de5"
     },
+    "alice-account": {
+      "address": "0x01cf0e2f2f715450",
+      "key": "71e081d9e38ec537aed7a4172a3fac0446af4c594b430ec4a257dfdf178c2938"
+    },
     "testnet-account": {
       "address": "0xfabeb94e9efc946c",
       "key": "d56781221397a09a61e377f6e6d0c74add1746bdb411b98c9cdcfbc46dcfcf9a"
@@ -37,3 +41,4 @@
     }
   }
 }
+ 
