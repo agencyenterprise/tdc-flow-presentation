@@ -42,7 +42,7 @@ pub contract DogsContract {
         }
 
         pub fun deposit(token: @Dog) {
-            let oldContract <- self.ownedDogs[token.id] <-! token
+            let oldContract <- self.ownedDogs[token.id] <- token
             destroy oldContract
         }
 
