@@ -1,5 +1,5 @@
 pub contract DogsContract {
-    pub var totalNFTs: UInt64
+    pub var totalDogs: UInt64
 
     pub struct DogInfo {
         pub let name: String
@@ -20,8 +20,8 @@ pub contract DogsContract {
         pub let dogInfo: DogInfo
 
         init(_ dogInfo: DogInfo) {
-            DogsContract.totalNFTs = DogsContract.totalNFTs + 1
-            self.id = DogsContract.totalNFTs
+            DogsContract.totalDogs = DogsContract.totalDogs + 1
+            self.id = DogsContract.totalDogs
             self.dogInfo = dogInfo
         }
     }
@@ -71,7 +71,7 @@ pub contract DogsContract {
     }
     
     init() {
-        self.totalNFTs = 0
+        self.totalDogs = 0
         
         let collection <- DogsContract.createCollection()
         self.account.save(<- collection, to: /storage/DogsCollection)
