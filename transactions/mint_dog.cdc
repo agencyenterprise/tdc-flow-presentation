@@ -10,16 +10,16 @@ transaction {
     }
 
     execute {
-        // let dogInfo = DogsContract.DogInfo(name: "Bilu", age: 3, breed: "Poodle", weight: 2.50)
-        //let dogInfo = DogsContract.DogInfo(name: "Rock", age: 1, breed: "Yorkshire", weight: 2.0)
-        let dogInfo = DogsContract.DogInfo(name: "Dexter", age: 4, breed: "German Shepherd", weight: 6.0)
+        // choose a dog:
+        let dogInfo = DogsContract.DogInfo(name: "Bilu", age: 3, breed: "Poodle", weight: 2.50)
+        // let dogInfo = DogsContract.DogInfo(name: "Rock", age: 1, breed: "Yorkshire", weight: 2.0)
+        // let dogInfo = DogsContract.DogInfo(name: "Dexter", age: 4, breed: "German Shepherd", weight: 6.0)
 
         let dog <- DogsContract.mintDog(dogInfo)
-
-        // where do we put Bilu?
-
-        // acct.save(<- dog, to: /storage/Dog1)
-
+        
+        // log(&dog as &DogsContract.Dog)
+        // destroy dog
+        
         self.collection.deposit(token: <- dog)
     }
 
