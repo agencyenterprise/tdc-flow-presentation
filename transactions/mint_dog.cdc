@@ -15,6 +15,8 @@ transaction {
         // let dogInfo = DogsContract.DogInfo(name: "Rock", age: 1, breed: "Yorkshire", weight: 2.0)
         // let dogInfo = DogsContract.DogInfo(name: "Dexter", age: 4, breed: "German Shepherd", weight: 6.0)
 
+        // acct.save(<- dog, to: /storage/Dog)        
+
         let dog <- DogsContract.mintDog(dogInfo)
         
         // log(&dog as &DogsContract.Dog)
