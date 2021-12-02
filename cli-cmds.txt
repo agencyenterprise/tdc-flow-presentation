@@ -1,0 +1,8 @@
+flow scripts execute scripts/list_dogs.cdc 0xf8d6e0586b0a20c7
+flow scripts execute scripts/list_dogs.cdc 0x01cf0e2f2f715450
+flow scripts execute scripts/list_dogs.cdc 0xfabeb94e9efc946c -n testnet
+
+flow transactions send transactions/create_collection.cdc --signer alice-account
+flow transactions send transactions/mint_dog.cdc
+flow transactions send transactions/transfer_dog.cdc 0x01cf0e2f2f715450 1
+flow transactions send transactions/transfer_dog.cdc 0xf8d6e0586b0a20c7 1 --signer alice-account
