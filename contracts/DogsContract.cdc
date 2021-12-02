@@ -31,7 +31,7 @@ pub contract DogsContract {
     }
     pub resource interface CollectionPublic {
         pub fun listDogs(): {UInt64: DogInfo}
-        pub fun deposit(token: @Dog) 
+        pub fun deposit(token: @Dog)
     }
 
     pub resource Collection: CollectionPublic {
@@ -42,8 +42,7 @@ pub contract DogsContract {
         }
 
         pub fun deposit(token: @Dog) {
-            let oldDog <- self.ownedDogs[token.id] <- token
-            destroy oldDog
+            self.ownedDogs[token.id] <-! token
         }
 
         pub fun withdraw(withdrawID: UInt64): @Dog {
